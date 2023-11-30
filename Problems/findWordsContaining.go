@@ -1,3 +1,5 @@
+package problems
+
 func findWordsContaining(words []string, x byte) []int {
 	var res []int
 
