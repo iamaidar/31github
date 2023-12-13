@@ -1,10 +1,19 @@
 package problems
 
 func nextGreatestLetter(letters []byte, target byte) byte {
-	for _, val := range letters {
-		if val > target {
-			return val
+	l, h := 0, len(letters)
+	for l < h {
+		mid := l + (h-l)/2
+		if letters[mid] <= target {
+			l = mid + 1
+		} else {
+			h = mid
 		}
 	}
-	return letters[0]
+
+	if l == len(letters) {
+		return letters[0]
+	}
+
+	return letters[l]
 }
