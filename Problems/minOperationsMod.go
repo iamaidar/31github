@@ -13,7 +13,7 @@ func check(k int) int {
 	return count
 }
 
-func minOperations(nums []int) int {
+func minOperationsMod(nums []int) int {
 	m := make(map[int]int)
 
 	count := 0
