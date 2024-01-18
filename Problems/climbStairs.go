@@ -2,8 +2,12 @@ package problems
 
 //Оказалось это просто числа Фиббоначи
 func climbStairs(n int) int {
-	a, b := 1, 1
-	for i := 0; i < n; i++ {
+	if n <= 3 {
+		return n
+	}
+
+	a, b := 1, 2
+	for i := 1; i < n; i++ {
 		a, b = b, a+b
 	}
 
